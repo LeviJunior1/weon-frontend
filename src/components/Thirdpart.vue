@@ -25,7 +25,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col>
+      <v-col cols="12" xs="12" sm="12" md="4" lg="4">
         <v-card class="card-one" color="#4261BA" elevation="2"
           ><span class="title-card">Sua operação rumo a alta performance</span>
           <br /><span class="describe"
@@ -45,7 +45,7 @@
           ></v-card
         >
       </v-col>
-      <v-col>
+      <v-col cols="12" xs="12" sm="12" md="4" lg="4">
         <v-card class="card-one" color="#00E2B5" elevation="2">
           <span class="title-card">Usar o weon é fácil</span><br />
           <span class="describe-center"
@@ -62,7 +62,7 @@
           ></v-card
         >
       </v-col>
-      <v-col>
+      <v-col cols="12" xs="12" sm="12" md="4" lg="4">
         <v-card class="card-one" color="#002244" elevation="2"
           ><span class="title-card">Tudo a um clique</span><br />
           <span class="describe"
