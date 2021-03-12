@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <v-row no-gutters>
     <FirstPart />
     <SecondPart />
     <ThirdPart />
     <FormPart />
-  </div>
+  </v-row>
 </template>
 
 <script>

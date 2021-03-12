@@ -35,10 +35,10 @@ span {
 </style>
 
 <template>
-  <div class="background-form">
+  <v-row no-gutters class="background-form">
     <v-container>
       <v-row>
-        <v-col>
+        <v-col sm="12" md="6">
           <h2>
             <span
               >Pronto para acelerar<br />
@@ -51,7 +51,7 @@ span {
             empresa pode ter com o WeON.
           </p>
         </v-col>
-        <v-col>
+        <v-col sm="12" md="6">
           <v-row>
             <v-col
               ><v-text-field
@@ -118,7 +118,7 @@ span {
         </v-col>
       </v-row>
     </v-container>
-  </div>
+  </v-row>
 </template>
 
 <script>

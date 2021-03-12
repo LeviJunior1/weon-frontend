@@ -3,13 +3,8 @@
 
 #rocket {
   background-image: url("https://weon.com.br/wp-content/uploads/2020/06/banner-principal-weon.jpg");
-  display: block;
-  width: 100%;
-  height: 100vh;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  background-size: contain;
-  -o-background-size: contain;
+  background-size: cover;
+  padding: 110px;
 }
 
 #title {
@@ -28,21 +23,36 @@
   line-height: 1.5em;
 }
 
-.row {
-  margin-top: 12%;
-}
-
 .btn_describe {
   color: #ffffff;
+}
+
+@media (max-width: 481px) {
+  #rocket {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0px 0px;
+    width: auto;
+  }
+
+  #title {
+    font-size: 30px;
+  }
+
+  #describe {
+    font-size: 11px;
+    text-align: left;
+  }
 }
 </style>
 
 <template>
-  <div id="rocket">
+  <v-row no-gutters id="rocket">
     <v-container>
       <v-row>
         <v-col>
-          <h6>
+          <h6 class="title-main">
             <span id="title"
               >A evolução do <br />
               Omnichannel</span
@@ -73,7 +83,7 @@
         </v-col>
       </v-row>
     </v-container>
-  </div>
+  </v-row>
 </template>
 
 <script>
