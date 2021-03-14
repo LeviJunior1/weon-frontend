@@ -5,15 +5,11 @@ const key = "box_91ac575b2a8792ba99b3";
 const url = `${urlJsonBox}${key}`
 
 async function create(contact) {
-    await axios.post(url, contact).then(response => {
-        console.log(response)
-    })
+    return await axios.post(url, contact).then(response => response)
 }
 
 async function read() {
-    await axios.get(url).then(response => {
-        console.log(response.data)
-    })
+    return await axios.get(url).then(response => response.data)
 }
 
 async function update(id, contact) {
@@ -23,10 +19,7 @@ async function update(id, contact) {
 }
 
 async function deleteContact(id) {
-    await axios.delete(`${url}/${id}`).then(response => {
-        console.log(response)
-    })
-
+    return await axios.delete(`${url}/${id}`).then(response => response)
 }
 
 export default { create, read, update, deleteContact };
