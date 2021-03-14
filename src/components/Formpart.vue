@@ -124,6 +124,7 @@ span {
 <script>
 import Vue from "vue";
 import Vuex from "vuex";
+import ApiJsonBox from "../services/Jsonbox";
 
 Vue.use(Vuex);
 
@@ -134,7 +135,7 @@ const store = new Vuex.Store({
   mutations: {
     SAVE_CONTACT(state, value) {
       state.contact = value;
-      console.log(value.contact);
+      console.log(state.contact);
     },
   },
 });
@@ -152,6 +153,11 @@ export default {
 
   methods: {
     save() {
+      ApiJsonBox.create(this.contact);
+      //ApiJsonBox.read();
+      // ApiJsonBox.update("604bd299e06ee10015c4aa2a", this.contact);
+      // ApiJsonBox.deleteContact("604bd299e06ee10015c4aa2a");
+
       store.commit("SAVE_CONTACT", {
         contact: this.contact,
       });
