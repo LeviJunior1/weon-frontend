@@ -10,6 +10,7 @@
     url("https://weon.com.br/wp-content/uploads/2020/06/banner_weon.jpg");
   background-size: cover;
   padding: 80px;
+  width: 70%;
 }
 
 #img-about-us {
@@ -44,10 +45,6 @@
     background-repeat: no-repeat;
     background-position: center;
     padding: 0px;
-    width: 50%;
-  }
-
-  #img-about-us {
   }
 }
 </style>

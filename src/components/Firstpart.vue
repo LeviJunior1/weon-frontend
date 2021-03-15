@@ -4,7 +4,8 @@
 #rocket {
   background-image: url("https://weon.com.br/wp-content/uploads/2020/06/banner-principal-weon.jpg");
   background-size: cover;
-  padding: 110px;
+  background-position: center;
+  padding: 80px;
 }
 
 #title {
@@ -33,7 +34,6 @@
     background-repeat: no-repeat;
     background-position: center;
     padding: 0px 0px;
-    width: auto;
   }
 
   #title {

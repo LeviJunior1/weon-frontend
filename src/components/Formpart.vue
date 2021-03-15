@@ -102,8 +102,8 @@ span {
               </v-text-field>
             </v-col>
           </v-row>
-          <v-row>
-            <v-col class="text-end">
+          <v-row justify="end">
+            <v-col cols="auto">
               <v-btn
                 class="btn_contact"
                 color="#00e2b5"
@@ -128,7 +128,7 @@ span {
                 <span>Editar Contato</span>
               </v-btn>
             </v-col>
-            <v-col cols="2">
+            <v-col cols="auto">
               <v-dialog v-model="dialog" persistent max-width="600px">
                 <template v-slot:activator="{ on, attrs }">
                   <v-btn
