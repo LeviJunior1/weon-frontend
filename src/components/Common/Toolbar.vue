@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-toolbar flat color="#243465" dark>
+    <v-toolbar flat color="#243465" dark app>
       <div class="d-flex align-center">
         <v-img
           alt="Weon Logo"
@@ -14,15 +14,39 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn text> Home </v-btn>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn text v-for="(item, i) in menu" :key="i">
+          {{ item.title }}
+        </v-btn>
+      </v-toolbar-items>
 
-      <v-btn text>
-        <span>Vem aí o WeON 4.0</span>
-      </v-btn>
+      <v-toolbar-items class="hidden-md-and-up">
+        <v-menu>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn dark icon v-bind="attrs" v-on="on">
+              <v-icon>mdi-dots-vertical</v-icon>
+            </v-btn>
+          </template>
 
-      <v-btn text>
-        <span>Tudo sobre contact center</span>
-      </v-btn>
+          <v-list>
+            <v-list-item v-for="(item, i) in menu" :key="i">
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+      </v-toolbar-items>
     </v-toolbar>
   </v-container>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    menu: [
+      { title: "Home" },
+      { title: "Vem aí o WeON 4.0" },
+      { title: "Tudo sobre contact center" },
+    ],
+  }),
+};
+</script>
